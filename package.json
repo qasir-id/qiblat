@@ -21,6 +21,7 @@
     "date-fns": "^2.13.0",
     "dayjs": "^1.8.26",
     "express": "^4.17.1",
+    "material-auto-rotating-carousel": "^3.0.2",
     "morgan": "^1.10.0",
     "next": "latest",
     "next-build-id": "^3.0.0",
@@ -33,9 +34,7 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^5.1.0",
-    "swr": "^0.2.0"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^9.3.6",

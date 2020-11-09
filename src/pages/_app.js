@@ -8,6 +8,7 @@ import NProgress from 'nprogress';
 // Material UI
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Button from '@material-ui/core/Button';
 
 // Next
 import Head from 'next/head';
@@ -59,7 +60,7 @@ const App = (props) => {
         {/* <meta name="GOOGLEBOT" content="index follow" /> */}
         {/* <meta name="google-site-verification" content="jGgc8PucdJuqZ2rfOb35bKBqOjkhFIJTFDWSykydy_M" /> */}
 
-        {/* <link rel="shortcut icon" href="https://www.qasir.id/images/favicon.png" /> */}
+        <link rel="shortcut icon" href="/img/icons/favicon.ico" />
         {/* <link
             rel="apple-touch-icon-precomposed"
             sizes="144x144"
@@ -71,7 +72,10 @@ const App = (props) => {
             href="https://www.qasir.id/images/favicons/favicon-32x32.png"
             sizes="32x32"
           /> */}
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
