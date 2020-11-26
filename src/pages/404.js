@@ -17,7 +17,9 @@ const Error404 = () => (
       <img src="/img/errors/404.svg" alt="not found" />
       <p>Halaman yang dicari dicari tidak ada, silahkan cek lagi</p>
       <Link href="/">
-        <Button>Kembali ke Dashboard</Button>
+        <Button color="primary" variant="contained">
+          Kembali ke Dashboard
+        </Button>
       </Link>
     </Error>
   </>
