@@ -3,7 +3,6 @@ import React from 'react';
 
 // Next
 import Head from 'next/head';
-import Link from 'next/link';
 
 // Material UI
 import { Container, Box } from '@material-ui/core';
@@ -11,12 +10,14 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    minHeight: '100%',
+    minHeight: '85vh',
     display: 'flex',
-    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
-    fontSize: 40,
+    fontSize: 50,
+    // color: theme.primary.main,
   },
 }));
 
@@ -28,7 +29,7 @@ const Welcome = () => {
         <title>Welcome - {process.env.NEXT_PUBLIC_APP_NAME}</title>
       </Head>
       <Container className={classes.wrapper}>
-        <Box flex="1 0 auto">
+        <div>
           <h1 className={classes.title}>Qasir Boilerplate</h1>
 
           <p className="description">
@@ -36,30 +37,16 @@ const Welcome = () => {
           </p>
 
           <div className="grid">
-            <a
-              href="https://github.com/qasir-id/Qasir-React-Boilerplate/blob/master/js/dashboard/README.md"
-              className="card"
-              target="_blank"
-            >
+            <a href="https://fe-qasir.gitbook.io/qiblat-documentation/" className="card" target="_blank">
               <h3>Learn &rarr;</h3>
               <p>Learn about Qasir react boilerplate structure.</p>
             </a>
-
-            <Link href="/auth/login">
-              <a className="card">
-                <h3>Examples &rarr;</h3>
-                <p>Discover layout dashboard with components.</p>
-              </a>
-            </Link>
           </div>
-        </Box>
+          <a href="https://www.qasir.id/" target="_blank" rel="noopener noreferrer">
+            Powered by <img src="/img/logo/qasir.svg" alt="Qasir Logo" className="logo" />
+          </a>
+        </div>
       </Container>
-
-      <footer>
-        <a href="https://www.qasir.id/" target="_blank" rel="noopener noreferrer">
-          Powered by <img src="/img/logo/qasir.svg" alt="Qasir Logo" className="logo" />
-        </a>
-      </footer>
     </>
   );
 };

@@ -6,7 +6,16 @@
       "@/common/*": ["components/common/*"],
       "@/hoc/*": ["components/hoc/*"],
       "@/error/*": ["components/error/*"],
-      "@/layout/*": ["components/layout/*"],
+
+      // Components Qasir UI
+      "@/qasir-ui/inputs/*": ["components/DS/inputs/*"],
+      "@/qasir-ui/navigation/*": ["components/DS/navigation/*"],
+      "@/qasir-ui/data-display/*": ["components/DS/data-display/*"],
+      "@/qasir-ui/surfaces/*": ["components/DS/surfaces/*"],
+      "@/qasir-ui/ui-kit/*": ["components/DS/ui-kit/*"],
+
+      // Layouts
+      "@/layout/*": ["layouts/*"],
 
       // Config
       "@/apis": ["config/apis"],
@@ -23,7 +32,10 @@
       "@/helpers": ["utils/helpers"],
       "@/tracker": ["utils/tracker"],
       "@/lstorage": ["utils/lstorage"],
-      "@/request": ["utils/request"]
+      "@/request": ["utils/request"],
+
+      // Node modules
+      "@/node-modules": ["../node_modules"]
     }
   }
 }

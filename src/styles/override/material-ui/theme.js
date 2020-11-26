@@ -1,50 +1,57 @@
 // Vendors
 import { createMuiTheme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
 
-// Components
-import { colorTheme } from './components/variables';
-import styleTypography from './components/data-display/typography';
-import styleButton from './components/inputs/button';
-import styleTextField from './components/inputs/text-field';
+// Styles
+import { buttonStyled } from '@/qasir-ui/inputs/button/style';
 
-// Create a theme instance.
-const theme = createMuiTheme({
+const defaultTheme = createMuiTheme();
+
+// A custom theme for this app
+export const modifyTheme = {
   palette: {
+    common: {
+      black: '#000',
+      white: '#fff',
+    },
     primary: {
-      main: colorTheme,
+      main: '#F04B32',
     },
     secondary: {
-      main: '#fff',
+      main: '#DADCE5',
     },
     error: {
-      main: red.A400,
+      main: '#F04B32',
     },
     background: {
       default: '#fff',
     },
-  },
-  typography: styleTypography,
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1280,
-      xl: 1920,
+    social: {
+      wa: '#25D366',
+      ig: '#DD2A7B',
+      fb: '#1877F2',
+      tw: '#1DA1F2',
+      yt: '#FF0000',
     },
   },
+  typography: {
+    fontFamily: ['"Montserrat"', 'sans-serif'].join(','),
+  },
+  shape: {
+    borderRadius: 4,
+  },
+};
+
+const theme = createMuiTheme({
+  ...modifyTheme,
   overrides: {
     MuiCssBaseline: {
       '@global': {
-        a: {
-          color: colorTheme,
-          textDecoration: 'none',
+        body: {
+          backgroundColor: '#F2F4F7',
         },
       },
     },
-    MuiButton: styleButton,
-    MuiTextField: styleTextField,
+    MuiButton: buttonStyled(modifyTheme),
   },
 });
 
