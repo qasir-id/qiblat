@@ -5,8 +5,6 @@
 ### New Features
 
 - Custome Server with Express.js
-- CSS-in-JS with Styled Components
-- Ant Design include
 - Unit testing with Jest
 - Redux + Redux Thunk ready
 - Stylesheet management (override, reset, global)
