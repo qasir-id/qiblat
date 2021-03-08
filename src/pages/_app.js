@@ -81,7 +81,7 @@ const App = (props) => {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <StyleGlobal />
         <CssBaseline />
-        <PersistGate persistor={store.__persistor} loading={<div>Loading</div>}>
+        <PersistGate persistor={store.__persistor} loading={null}>
           <Layout>
             <Component {...pageProps} />
           </Layout>

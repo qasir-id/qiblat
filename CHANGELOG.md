@@ -1,8 +1,8 @@
 # Release Note:
 
-## V1.0.0 (xxxx-xx-xx)
+## V1.0.0 (2021-03-08)
 
-### Features
+### New Features
 
 - Custome Server with Express.js
 - CSS-in-JS with Styled Components

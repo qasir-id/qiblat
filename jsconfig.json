@@ -9,10 +9,6 @@
 
       // Components Qasir UI
       "@/qasir-ui/inputs/*": ["components/DS/inputs/*"],
-      "@/qasir-ui/navigation/*": ["components/DS/navigation/*"],
-      "@/qasir-ui/data-display/*": ["components/DS/data-display/*"],
-      "@/qasir-ui/surfaces/*": ["components/DS/surfaces/*"],
-      "@/qasir-ui/ui-kit/*": ["components/DS/ui-kit/*"],
 
       // Layouts
       "@/layout/*": ["layouts/*"],
