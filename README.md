@@ -67,23 +67,23 @@
 This is a feature that is ready in it:
 
 - Custome Server with [Express.js](https://expressjs.com/)
-- CSS-in-JS with [Styled Components](https://styled-components.com/)
-- [Ant Design](https://ant.design/) include
+- [Qasir UI](https://www.npmjs.com/package/qasir-ui) include
+- [Material UI](https://material-ui.com/) include
 - Unit testing with [Jest](https://jestjs.io/)
 - [Redux](https://redux.js.org/) + [Redux Thunk](https://github.com/reduxjs/redux-thunk) ready
 - Layout management
-- Stylesheet management (override, reset, global)
+- Stylesheet management (override, global)
 - Analyze bundles app
-- Error page (404, 500) include
+- Error page (404, 500) & login page include
 - Environment variables
 - Absolute import
 - Metadata management
 - Assets management (images, fonts etc)
 - Loading pre-rendering
 - Folder management (structure files app)
-- SVG components include
 - Components management
 - API management
 - Library management
 - Debugger config
+- PWA supported
 - Custom folder build & build ID include

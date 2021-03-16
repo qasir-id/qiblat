@@ -29,6 +29,7 @@
     "next-redux-wrapper": "^6.0.2",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
+    "qasir-ui": "^1.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-material-ui-form-validator": "^2.0.10",
@@ -36,7 +37,6 @@
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.2.1",
     "yup": "^0.31.0"
   },
   "devDependencies": {
