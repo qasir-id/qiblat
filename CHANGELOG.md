@@ -13,12 +13,14 @@
 
 - Adding Qasir UI
 - Adding Webpack configs for url, file, css loader
+- Adding plug & play local MUI theme
+- Adding plug & play Redux configs
 
 ## 1.0.1 - Feb 2021
 
 ### Changed
 
-- Removed styled components 
+- Removed styled components
 - Removed reset style config
 
 ### Added
