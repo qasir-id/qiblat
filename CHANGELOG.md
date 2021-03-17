@@ -12,6 +12,7 @@
 ### Added
 
 - Adding Qasir UI
+- Adding Webpack configs for url, file, css loader
 
 ## 1.0.1 - Feb 2021
 

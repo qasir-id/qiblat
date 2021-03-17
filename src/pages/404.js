@@ -1,28 +1,45 @@
+import React from 'react';
+
 // Next
 import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 // Material UI
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 
-// Components
-import Error from '@/error/index';
+// Qasir UI
+const Error = dynamic(() => import('qasir-ui/data-display/Error'), { ssr: false });
+import Button from 'qasir-ui/inputs/Button';
 
-const Error404 = () => (
-  <>
-    <Head>
-      <title>Error 404 - Page Not Found</title>
-    </Head>
-    <Error>
-      <img src="/img/errors/404.svg" alt="not found" />
-      <p>Halaman yang dicari dicari tidak ada, silahkan cek lagi</p>
-      <Link href="/">
-        <Button color="primary" variant="contained">
-          Kembali ke Dashboard
-        </Button>
-      </Link>
-    </Error>
-  </>
-);
+// Styles
+const useStyles = makeStyles({
+  root: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+const Error404 = () => {
+  const classes = useStyles();
+  return (
+    <>
+      <Head>
+        <title>Error 404 - Page Not Found</title>
+      </Head>
+      <div className={classes.root}>
+        <Error variant="404" />
+        <Link href="/">
+          <Button color="primary" variant="contained">
+            Kembali ke Dashboard
+          </Button>
+        </Link>
+      </div>
+    </>
+  );
+};
 
 export default Error404;

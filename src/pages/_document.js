@@ -3,9 +3,6 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
-// Theme
-import theme from '@/override/material-ui/theme';
-
 export default class MyDocument extends Document {
   render() {
     return (
@@ -14,8 +11,6 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
 
           {/* Mobile Configurations */}
           <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />

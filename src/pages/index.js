@@ -8,6 +8,9 @@ import Head from 'next/head';
 import { Container, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
+// Qasir UI
+import Typography from 'qasir-ui/data-display/Typography';
+
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     minHeight: '85vh',
@@ -31,7 +34,6 @@ const Welcome = () => {
       <Container className={classes.wrapper}>
         <div>
           <h1 className={classes.title}>Qasir Boilerplate</h1>
-
           <p className="description">
             Get started by editing <code>pages/index.js</code>
           </p>

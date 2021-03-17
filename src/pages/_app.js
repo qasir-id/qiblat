@@ -5,17 +5,16 @@ import { PersistGate } from 'redux-persist/integration/react';
 import PropTypes from 'prop-types';
 import NProgress from 'nprogress';
 
-// Material UI
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Button from '@material-ui/core/Button';
-
 // Next
 import Head from 'next/head';
 import Router from 'next/router';
 
+// Material UI
+// import { ThemeProvider } from '@material-ui/core/styles';
+// import CssBaseline from '@material-ui/core/CssBaseline';
+
 // Theme
-import theme from '@/override/material-ui/theme';
+// import theme from '@/override/material-ui/theme';
 
 // Configs
 import { wrapper } from '@/redux/store';
@@ -77,16 +76,19 @@ const App = (props) => {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <StyleGlobal />
-        <CssBaseline />
-        <PersistGate persistor={store.__persistor} loading={null}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </PersistGate>
-      </ThemeProvider>
+
+      {/* <ThemeProvider theme={theme}> */}
+
+      <StyleGlobal />
+      {/* <CssBaseline /> */}
+
+      <PersistGate persistor={store.__persistor} loading={null}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </PersistGate>
+
+      {/* </ThemeProvider> */}
     </>
   );
 };
