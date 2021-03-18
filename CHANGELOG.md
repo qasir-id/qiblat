@@ -8,6 +8,7 @@
 - Removed error component
 - Removed Graphql configs
 - Removed Redux example in pages folder
+- Removed Nprogress plugin
 
 ### Added
 
@@ -15,6 +16,7 @@
 - Adding Webpack configs for url, file, css loader
 - Adding plug & play local MUI theme
 - Adding plug & play Redux configs
+- Adding Assets image (logo, manifest logo, favicon)
 
 ## 1.0.1 - Feb 2021
 

@@ -27,7 +27,6 @@
     "next": "latest",
     "next-build-id": "^3.0.0",
     "next-redux-wrapper": "^6.0.2",
-    "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "qasir-ui": "^1.0.7",
     "react": "^16.13.1",

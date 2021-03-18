@@ -1,13 +1,11 @@
 // Vendors
 import React, { useEffect } from 'react';
-import { useStore } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+// import { useStore } from 'react-redux';
+// import { PersistGate } from 'redux-persist/integration/react';
 import PropTypes from 'prop-types';
-import NProgress from 'nprogress';
 
 // Next
 import Head from 'next/head';
-import Router from 'next/router';
 
 // Material UI
 // import { ThemeProvider } from '@material-ui/core/styles';
@@ -17,25 +15,18 @@ import Router from 'next/router';
 // import theme from '@/override/material-ui/theme';
 
 // Configs
-import { wrapper } from '@/redux/store';
+// import { wrapper } from '@/redux/store';
 
 // Styles
 import StyleGlobal from '@/globalStyle/index';
 
 const Noop = ({ children }) => children;
 
-// Loading pre-rendering
-Router.events.on('routeChangeStart', (url) => {
-  if (process.env.NEXT_PUBLIC_APP_ENV !== 'production') console.log(`Loading: ${url}`);
-  NProgress.start();
-});
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
-
 const App = (props) => {
   const { Component, pageProps } = props;
   const Layout = Component.Layout || Noop;
-  const store = useStore((state) => state);
+  // const store = useStore((state) => state);
+  const classes = StyleGlobal();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -79,14 +70,13 @@ const App = (props) => {
 
       {/* <ThemeProvider theme={theme}> */}
 
-      <StyleGlobal />
       {/* <CssBaseline /> */}
 
-      <PersistGate persistor={store.__persistor} loading={null}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </PersistGate>
+      {/* <PersistGate persistor={store.__persistor} loading={null}> */}
+      <Layout className={classes.root}>
+        <Component {...pageProps} />
+      </Layout>
+      {/* </PersistGate> */}
 
       {/* </ThemeProvider> */}
     </>
@@ -98,4 +88,5 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export default wrapper.withRedux(App);
+export default App;
+// export default wrapper.withRedux(App);

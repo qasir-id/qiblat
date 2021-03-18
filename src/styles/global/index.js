@@ -1,9 +1,9 @@
-import { css, createGlobalStyle } from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
 
-import NProgress from './nprogress';
-
-const StyleGlobal = createGlobalStyle`${css`
-  ${NProgress}
-`}`;
+const StyleGlobal = makeStyles({
+  root: {
+    backgroundColor: 'red',
+  },
+});
 
 export default StyleGlobal;
