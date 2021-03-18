@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      // Components
+      "@/common/*": ["components/common/*"],
+      "@/hoc/*": ["components/hoc/*"],
+
+      // Layouts
+      "@/layout/*": ["layouts/*"],
+
+      // Config
+      "@/apis": ["config/apis"],
+      "@/constants": ["config/constants"],
+
+      // Lib
+      "@/redux/*": ["lib/redux/*"],
+
+      // Styles
+      "@/globalStyle/*": ["styles/global/*"],
+      "@/override/*": ["styles/override/*"],
+
+      // Utils
+      "@/helpers": ["utils/helpers"],
+      "@/tracker": ["utils/tracker"],
+      "@/lstorage": ["utils/lstorage"],
+      "@/request": ["utils/request"],
+
+      // Node modules
+      "@/node-modules": ["../node_modules"]
+    }
+  }
+}
