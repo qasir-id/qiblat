@@ -1,9 +1,9 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { css, createGlobalStyle } from 'styled-components';
 
-const StyleGlobal = makeStyles({
-  root: {
-    backgroundColor: 'red',
-  },
-});
+const StyleGlobal = createGlobalStyle`${css`
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+`}`;
 
 export default StyleGlobal;

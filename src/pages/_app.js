@@ -26,7 +26,6 @@ const App = (props) => {
   const { Component, pageProps } = props;
   const Layout = Component.Layout || Noop;
   // const store = useStore((state) => state);
-  const classes = StyleGlobal();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -72,8 +71,10 @@ const App = (props) => {
 
       {/* <CssBaseline /> */}
 
+      <StyleGlobal />
+
       {/* <PersistGate persistor={store.__persistor} loading={null}> */}
-      <Layout className={classes.root}>
+      <Layout>
         <Component {...pageProps} />
       </Layout>
       {/* </PersistGate> */}

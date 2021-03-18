@@ -22,7 +22,6 @@
 
 ### Changed
 
-- Removed styled components
 - Removed reset style config
 
 ### Added
