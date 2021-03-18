@@ -14,9 +14,9 @@
 
 - Adding Qasir UI
 - Adding Webpack configs for url, file, css loader
-- Adding plug & play local MUI theme
-- Adding plug & play Redux configs
-- Adding Assets image (logo, manifest logo, favicon)
+- Adding integration local MUI theme
+- Adding integration Redux configs
+- Adding assets image (logo, manifest logo, favicon)
 
 ## 1.0.1 - Feb 2021
 
