@@ -9,14 +9,17 @@
 - Removed Graphql configs
 - Removed Redux example in pages folder
 - Removed Nprogress plugin
+- Removed common Alert component
 
 ### Added
 
 - Adding Qasir UI
 - Adding Webpack configs for url, file, css loader
-- Adding plug & play local MUI theme
-- Adding plug & play Redux configs
-- Adding Assets image (logo, manifest logo, favicon)
+- Adding integration local MUI theme
+- Adding integration Redux configs
+- Adding assets image (logo, manifest logo, favicon)
+- Adding common Button component
+- Adding auto open browser tab with library [open](https://github.com/sindresorhus/open)
 
 ## 1.0.1 - Feb 2021
 

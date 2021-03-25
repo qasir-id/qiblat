@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import chalk from 'chalk';
 import dayjs from 'dayjs';
+import open from 'open';
 import 'dayjs/locale/id';
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -53,7 +54,9 @@ app.prepare().then(() => {
       console.log(chalk.redBright(err));
       throw err;
     }
+    // Development console
     if (dev) {
+      open(`http://localhost:${port}`);
       console.log(
         chalk.green(
           `> Development ${appName} Ready on ${chalk.yellowBright(
@@ -61,7 +64,9 @@ app.prepare().then(() => {
           )} => ${chalk.cyanBright('HAPPY CODING :D')}`
         )
       );
-    } else {
+    }
+    // Production console
+    else {
       console.log(chalk.greenBright(`> ${appName} is already running`));
     }
   });
