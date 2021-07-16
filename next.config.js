@@ -1,5 +1,5 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.NEXT_PUBLIC_APP_ANALYZE === true || process.env.ANALYZE === true,
+  enabled: process.env.NEXT_PUBLIC_APP_ANALYZE === 'true' || process.env.ANALYZE === 'true',
 });
 const withCSS = require('@zeit/next-css');
 const nextBuildId = require('next-build-id');

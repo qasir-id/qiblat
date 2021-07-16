@@ -28,7 +28,7 @@
     "next-build-id": "^3.0.0",
     "next-redux-wrapper": "^6.0.2",
     "prop-types": "^15.7.2",
-    "qasir-ui": "^1.0.7",
+    "qasir-ui": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-material-ui-form-validator": "^2.0.10",
@@ -55,7 +55,7 @@
     "jest": "^25.1.0",
     "next-compose-plugins": "^2.2.1",
     "null-loader": "^4.0.0",
-    "open": "^8.0.4",
+    "open": "^8.2.1",
     "postcss-preset-env": "^6.7.0",
     "react-test-renderer": "^16.12.0",
     "redux-devtools-extension": "^2.13.8"

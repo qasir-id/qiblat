@@ -56,7 +56,6 @@ app.prepare().then(() => {
     }
     // Development console
     if (dev) {
-      open(`http://localhost:${port}`);
       console.log(
         chalk.green(
           `> Development ${appName} Ready on ${chalk.yellowBright(
@@ -64,6 +63,11 @@ app.prepare().then(() => {
           )} => ${chalk.cyanBright('HAPPY CODING :D')}`
         )
       );
+
+      (async () => {
+        // Opens the URL in the default browser.
+        await open(`http://localhost:${port}`);
+      })();
     }
     // Production console
     else {

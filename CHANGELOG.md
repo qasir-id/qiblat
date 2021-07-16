@@ -5,6 +5,8 @@
 ### Changed
 
 - Changed compose scripts webpack plugins in next config
+- Changed server script to add initial open development browser
+- Removed errors folder in pages
 
 ## 1.0.2 - March 2021
 
