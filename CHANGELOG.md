@@ -1,5 +1,11 @@
 # Release Note:
 
+## 1.0.3 - July 2021
+
+### Changed
+
+- Changed compose scripts webpack plugins in next config
+
 ## 1.0.2 - March 2021
 
 ### Changed
