@@ -1,7 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.NEXT_PUBLIC_APP_ANALYZE === 'true' || process.env.ANALYZE === 'true',
 });
-const withCSS = require('@zeit/next-css');
 const nextBuildId = require('next-build-id');
 const withPlugins = require('next-compose-plugins');
 const isProd = process.env.NEXT_PUBLIC_APP_ENV === 'production';
@@ -31,4 +30,4 @@ const nextConfig = {
   poweredByHeader: false,
 };
 
-module.exports = withPlugins([[withBundleAnalyzer], [withCSS]], nextConfig);
+module.exports = withPlugins([[withBundleAnalyzer]], nextConfig);

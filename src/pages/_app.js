@@ -17,14 +17,16 @@ import Head from 'next/head';
 // Configs
 // import { wrapper } from '@/redux/store';
 
+// Layout
+import Layout from '@/layout/dashboard/container';
+
 // Styles
 import StyleGlobal from '@/globalStyle/index';
 
-const Noop = ({ children }) => children;
-
 const App = (props) => {
   const { Component, pageProps } = props;
-  const Layout = Component.Layout || Noop;
+  // Use the layout defined at the page level, if available
+  // const getLayout = Component.getLayout || ((page) => page);
   // const store = useStore((state) => state);
 
   useEffect(() => {
@@ -68,7 +70,6 @@ const App = (props) => {
       </Head>
 
       {/* <ThemeProvider theme={theme}> */}
-
       {/* <CssBaseline /> */}
 
       <StyleGlobal />
@@ -78,7 +79,6 @@ const App = (props) => {
         <Component {...pageProps} />
       </Layout>
       {/* </PersistGate> */}
-
       {/* </ThemeProvider> */}
     </>
   );
