@@ -1,5 +1,14 @@
 # Release Note:
 
+## 1.0.5 - October 2021
+
+### Added
+
+- Adding [Firebase web version 9](https://firebase.google.com/docs/analytics/get-started?platform=web#web-version-9)
+- Adding [http-server](https://www.npmjs.com/package/http-server) library
+- Adding html development in boilerplate structure
+- Adding samples email template (blueprint, invoice, order)
+
 ## 1.0.4 - August 2021
 
 ### Changed

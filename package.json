@@ -8,7 +8,8 @@
     "start": "cross-env NODE_OPTIONS=\"-r esm\" NODE_ENV=production node server.js",
     "analyze": "cross-env-shell NODE_OPTIONS=\"-r esm\" ANALYZE=true next build",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "html": "http-server ./src/html"
   },
   "dependencies": {
     "@material-ui/core": "latest",
@@ -21,6 +22,7 @@
     "date-fns": "^2.13.0",
     "dayjs": "^1.8.26",
     "express": "^4.17.1",
+    "firebase": "^9.1.1",
     "formik": "^2.2.5",
     "morgan": "^1.10.0",
     "next": "latest",
@@ -50,6 +52,7 @@
     "cross-env": "^7.0.2",
     "esm": "^3.2.25",
     "file-loader": "^6.2.0",
+    "http-server": "^13.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "next-compose-plugins": "^2.2.1",

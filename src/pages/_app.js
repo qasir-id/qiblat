@@ -20,8 +20,14 @@ import Head from 'next/head';
 // Layout
 import Layout from '@/layout/dashboard/container';
 
+// Lib
+// import InitializeFirebase from '@/firebase/config';
+
 // Styles
 import StyleGlobal from '@/globalStyle/index';
+
+// Initialize Firebase
+// InitializeFirebase;
 
 const App = (props) => {
   const { Component, pageProps } = props;
