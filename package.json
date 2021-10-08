@@ -22,7 +22,6 @@
     "date-fns": "^2.13.0",
     "dayjs": "^1.8.26",
     "express": "^4.17.1",
-    "firebase": "^9.1.1",
     "formik": "^2.2.5",
     "morgan": "^1.10.0",
     "next": "latest",
