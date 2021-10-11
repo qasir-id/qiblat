@@ -30,7 +30,7 @@ if (typeof window !== 'undefined' && !firebase.apps.length) {
 }
 
 // Analytics
-const firebaseAnalytics = firebase.analytics();
+const firebaseAnalytics = firebase.analytics;
 
 // Log Events
 const firebaseEvent = (eventName) => firebase.analytics().logEvent(eventName);
