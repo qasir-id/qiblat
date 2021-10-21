@@ -13,6 +13,9 @@
       "@/apis": ["config/apis"],
       "@/constants": ["config/constants"],
 
+      // Hooks
+      "@/hooks/*": ["hooks/*"],
+
       // Lib
       "@/redux/*": ["lib/redux/*"],
       "@/firebase": ["lib/firebase"],

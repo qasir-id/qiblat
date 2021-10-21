@@ -8,6 +8,12 @@
 - Adding [http-server](https://www.npmjs.com/package/http-server) library
 - Adding html development in boilerplate structure
 - Adding samples email template (blueprint, invoice, order)
+- Adding Hooks (
+  [useToggle](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/event-handler#usetoggle),
+  [useEventListener](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/event-handler#useEventListener)
+  [useWhyDidYouUpdate](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/lifecycle-components#useWhyDidYouUpdate)
+  [useRouter](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/navigation#useRouter)
+  )
 
 ## 1.0.4 - August 2021
 

@@ -21,7 +21,7 @@ import Head from 'next/head';
 import Layout from '@/layout/dashboard/container';
 
 // Lib
-import { firebaseAnalytics, firebasePerformance } from '@/firebase';
+// import { firebaseAnalytics, firebasePerformance } from '@/firebase';
 
 // Styles
 import StyleGlobal from '@/globalStyle/index';
@@ -34,7 +34,7 @@ const App = (props) => {
 
   useEffect(() => {
     // Initialize Firebase
-    firebaseAnalytics();
+    // firebaseAnalytics();
 
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
