@@ -5,6 +5,7 @@
 ### Added
 
 - Adding [Firebase web version 8](https://firebase.google.com/docs/analytics/get-started?platform=web#web-version-8)
+- Adding [Bugsnag](https://www.bugsnag.com)
 - Adding [http-server](https://www.npmjs.com/package/http-server) library
 - Adding html development in boilerplate structure
 - Adding samples email template (blueprint, invoice, order)
