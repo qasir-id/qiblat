@@ -2,5 +2,7 @@
 2. Only CSS queries can be used in style tags.
 
 Tool convert style tag to inline
-https://templates.mailchimp.com/resources/inline-css
 https://htmlemail.io/inline
+
+Test email
+https://app.postdrop.io
