@@ -14,6 +14,8 @@
   [useEventListener](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/event-handler#useEventListener)
   [useWhyDidYouUpdate](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/lifecycle-components#useWhyDidYouUpdate)
   [useRouter](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/navigation#useRouter)
+  [useLocalStorage](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/storage#useLocalStorage)
+  [useSessionStorage](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/storage#useSessionStorage)
   )
 
 ## 1.0.4 - August 2021
