@@ -1,5 +1,50 @@
 # Release Note:
 
+## 1.0.5 - October 2021
+
+### Added
+
+- Adding [Firebase web version 8](https://firebase.google.com/docs/analytics/get-started?platform=web#web-version-8)
+- Adding [Bugsnag](https://www.bugsnag.com)
+- Adding [http-server](https://www.npmjs.com/package/http-server) library
+- Adding html development in boilerplate structure
+- Adding samples email template (blueprint, invoice, order)
+- Adding Hooks (
+  [useToggle](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/event-handler#usetoggle),
+  [useEventListener](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/event-handler#useEventListener)
+  [useWhyDidYouUpdate](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/lifecycle-components#useWhyDidYouUpdate)
+  [useRouter](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/navigation#useRouter)
+  [useLocalStorage](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/storage#useLocalStorage)
+  [useSessionStorage](https://fe-qasir.gitbook.io/qiblat-documentation/features/hooks/storage#useSessionStorage)
+  )
+
+## 1.0.4 - August 2021
+
+### Changed
+
+- Updated boilerplate structure for adding locales folder multi language
+
+### Added
+
+- Adding multi language with next-i18next
+
+## 1.0.3 - July 2021
+
+### Changed
+
+- Updated version next.js to v11.0.1
+- Updated boilerplate structure for adding locales folder multi language
+- Changed compose scripts webpack plugins in next config
+- Changed server script to add initial open development browser
+- Removed errors folder in pages
+- Removed @zeit/next-css
+
+### Added
+
+- Adding ESLint
+- Adding API Middlewares
+- Adding multi language with next-i18next
+
 ## 1.0.2 - March 2021
 
 ### Changed
