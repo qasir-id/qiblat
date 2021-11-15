@@ -1,5 +1,11 @@
 # Release Note:
 
+## 1.0.6 - November 2021
+
+### Changed
+
+- Updated check dependencies module in running script package.json for dev mode
+
 ## 1.0.5 - October 2021
 
 ### Added

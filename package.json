@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=\"-r esm --inspect\" node server.js",
+    "dev": "yarn install && cross-env NODE_OPTIONS=\"-r esm --inspect\" node server.js",
     "build": "cross-env NODE_OPTIONS=\"-r esm\" next build",
     "start": "cross-env NODE_OPTIONS=\"-r esm\" NODE_ENV=production node server.js",
     "analyze": "cross-env-shell NODE_OPTIONS=\"-r esm\" ANALYZE=true next build",
