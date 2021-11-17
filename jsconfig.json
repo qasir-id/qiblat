@@ -4,7 +4,7 @@
     "paths": {
       // Components
       "@/common/*": ["components/common/*"],
-      "@/hoc/*": ["components/hoc/*"],
+      "@/page/*": ["components/page/*"],
 
       // Layouts
       "@/layout/*": ["layouts/*"],
