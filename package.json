@@ -1,6 +1,6 @@
 {
   "name": "Qiblat",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "private": true,
   "scripts": {
     "dev": "yarn install && cross-env NODE_OPTIONS=\"-r esm --inspect\" node server.js",
