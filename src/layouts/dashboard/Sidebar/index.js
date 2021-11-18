@@ -1,5 +1,8 @@
 // Vendors
-import React from 'react';
+import React, { useState } from 'react';
+
+// Material UI
+import withWidth from '@material-ui/core/withWidth';
 
 // Qasir UI
 import Drawer from '@material-ui/core/Drawer';
@@ -14,9 +17,10 @@ import IconDropdown from 'qasir-ui/data-display/Icon/IconDropdown';
 // Styles
 import useStylesSidebar from './style';
 
-const Sidebar = ({ children }) => {
+const Sidebar = (props) => {
+  const { width } = props;
   const classes = useStylesSidebar();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
     setOpen(!open);
@@ -25,7 +29,7 @@ const Sidebar = ({ children }) => {
   return (
     <Drawer
       className={classes.drawer}
-      variant="permanent"
+      variant={width == 'sm' ? 'persistent' : 'permanent'}
       classes={{
         paper: classes.drawerPaper,
       }}
@@ -64,4 +68,4 @@ const Sidebar = ({ children }) => {
   );
 };
 
-export default Sidebar;
+export default withWidth()(Sidebar);

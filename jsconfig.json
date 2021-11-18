@@ -21,6 +21,9 @@
       "@/firebase": ["lib/firebase"],
       "@/bugsnag": ["lib/bugsnag"],
 
+      // Store
+      "@/store/*": ["store/*"],
+
       // Styles
       "@/globalStyle/*": ["styles/global/*"],
       "@/override/*": ["styles/override/*"],

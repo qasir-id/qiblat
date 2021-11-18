@@ -16,10 +16,13 @@ const useStylesSidebar = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: sidebarWidth,
-    top: headerHeight,
+    top: '96px !important',
     backgroundColor: '#F2F4F7',
     border: 'none',
     transition: 'none',
+    '&.MuiDrawer-paperAnchorDockedLeft': {
+      border: 'none',
+    },
     '& .MuiListItem-root': {
       marginBottom: 8,
       paddingTop: 15,

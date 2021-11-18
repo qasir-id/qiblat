@@ -2214,7 +2214,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.12.3", "@material-ui/core@latest":
+"@material-ui/core@^4.12.3":
   version "4.12.3"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.12.3.tgz#80d665caf0f1f034e52355c5450c0e38b099d3ca"
   integrity sha512-sdpgI/PL56QVsEJldwEe4FFaFTLUqN+rd7sSZiRCdx2E/C7z5yK0y/khAWVBH24tXwto7I1hCzNWfJGZIYJKnw==
@@ -11640,13 +11640,13 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qasir-ui@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/qasir-ui/-/qasir-ui-1.0.8.tgz#f820d21953a0dd10300689515f6bd56d17aabf7f"
-  integrity sha512-IwA0qLxHYAbLkqMGXIpjNMDkiNLGsWCtO2hWo/takG7N43RN9HuPsb5l88CYpV2nenxzpWYEplawfp6OYYfiOg==
+qasir-ui@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/qasir-ui/-/qasir-ui-1.1.4.tgz#42110cc3526f83e04ef4d86da8d5045a23e9ef61"
+  integrity sha512-kAcTzp0vFP2/QnRHYFIvYgQLJ+h7GkUdMTQP46/YcA+QBXtLN+NVlWr/ldV87za8ZqOWNHFF/NfGco/dBaAMKA==
   dependencies:
     "@emotion/core" "^11.0.0"
-    "@material-ui/core" latest
+    "@material-ui/core" "^4.12.3"
     "@material-ui/data-grid" "^4.0.0-alpha.33"
     "@material-ui/icons" "^4.9.1"
     "@material-ui/lab" "^4.0.0-alpha.56"
