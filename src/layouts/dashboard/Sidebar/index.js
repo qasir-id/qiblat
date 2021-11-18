@@ -1,5 +1,6 @@
 // Vendors
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 // Material UI
 import withWidth from '@material-ui/core/withWidth';
@@ -18,7 +19,9 @@ import IconDropdown from 'qasir-ui/data-display/Icon/IconDropdown';
 import useStylesSidebar from './style';
 
 const Sidebar = (props) => {
-  const { width } = props;
+  const { width, stateLayout } = props;
+  const { sidebarOpen } = stateLayout.dashboard;
+
   const classes = useStylesSidebar();
   const [open, setOpen] = useState(false);
 
@@ -29,10 +32,11 @@ const Sidebar = (props) => {
   return (
     <Drawer
       className={classes.drawer}
-      variant={width == 'sm' ? 'persistent' : 'permanent'}
+      variant={width == 'xs' || width == 'sm' ? 'persistent' : 'permanent'}
       classes={{
         paper: classes.drawerPaper,
       }}
+      open={sidebarOpen}
     >
       <div className={classes.drawerContainer}>
         <List>
@@ -68,4 +72,8 @@ const Sidebar = (props) => {
   );
 };
 
-export default withWidth()(Sidebar);
+const mapStateToProps = ({ layout }) => ({
+  stateLayout: layout,
+});
+
+export default connect(mapStateToProps)(withWidth()(Sidebar));

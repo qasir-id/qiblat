@@ -28,7 +28,7 @@ const useStylesContent = makeStyles((theme) => ({
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    marginLeft: 0,
+    marginLeft: sidebarWidth,
   },
   navPage: {
     backgroundColor: '#F2F4F7',
@@ -46,6 +46,10 @@ const useStylesContent = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       top: 74,
       left: 0,
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
     },
     '& > div': {
       backgroundColor: '#ffffff',
@@ -64,10 +68,30 @@ const useStylesContent = makeStyles((theme) => ({
         top: 74,
         left: 0,
         borderRadius: 0,
+        transition: theme.transitions.create(['margin', 'width'], {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
       },
       '& .MuiTypography-h3': {
         fontSize: 20,
       },
+    },
+  },
+  navPageShift: {
+    width: `calc(100% - ${sidebarWidth}px)`,
+    marginLeft: sidebarWidth,
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    '& > div': {
+      width: `calc(100% - ${sidebarWidth}px)`,
+      marginLeft: sidebarWidth,
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
     },
   },
 }));

@@ -1,5 +1,6 @@
 // Vendors
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import clsx from 'clsx';
 
 // Qasir UI
@@ -16,11 +17,16 @@ import IconMenu from 'qasir-ui/data-display/Icon/IconMenu';
 import HeaderMenuOutlet from './HeaderMenuOutlet';
 import HeaderMenuProfile from './HeaderMenuProfile';
 
+// Actions
+import { actionLayoutDashboardSidebar } from '@/store/layout/dashboard/actions';
+
 // Styles
 import useStylesHeader from './style';
 
 const Header = (props) => {
-  const { fullscreenActive, fullscreenEnter, fullscreenExit } = props;
+  const { stateLayout, fullscreenActive, fullscreenEnter, fullscreenExit, actionLayoutDashboardSidebar } =
+    props;
+  const { sidebarOpen } = stateLayout.dashboard;
   const classes = useStylesHeader();
 
   const elementLogo = () => (
@@ -32,13 +38,12 @@ const Header = (props) => {
   );
 
   // Menu mobile
-  const [openMenuMobile, setOpenMenuMobile] = useState(false);
   const handleMenuMobileOpen = () => {
-    setOpenMenuMobile(true);
+    actionLayoutDashboardSidebar(true);
   };
 
   const handleMenuMobileClose = () => {
-    setOpenMenuMobile(false);
+    actionLayoutDashboardSidebar(false);
   };
 
   return (
@@ -46,7 +51,7 @@ const Header = (props) => {
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
-          [classes.appBarShift]: openMenuMobile,
+          [classes.appBarShift]: sidebarOpen,
         })}
         color="default"
       >
@@ -60,7 +65,7 @@ const Header = (props) => {
               <HeaderMenuOutlet />
             </Hidden>
             <Hidden mdUp>
-              <IconButton onClick={openMenuMobile ? handleMenuMobileClose : handleMenuMobileOpen}>
+              <IconButton onClick={sidebarOpen ? handleMenuMobileClose : handleMenuMobileOpen}>
                 <IconMenu />
               </IconButton>
             </Hidden>
@@ -77,4 +82,12 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+const mapStateToProps = ({ layout }) => ({
+  stateLayout: layout,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actionLayoutDashboardSidebar: (payload) => dispatch(actionLayoutDashboardSidebar(payload)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

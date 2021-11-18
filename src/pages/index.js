@@ -1,5 +1,7 @@
 // Vendors
 import React from 'react';
+import { connect } from 'react-redux';
+import clsx from 'clsx';
 
 // Next
 import Head from 'next/head';
@@ -27,7 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Welcome = () => {
+const Welcome = (props) => {
+  const { stateLayout } = props;
+  const { sidebarOpen } = stateLayout.dashboard;
   const classes = useStyles();
   const classesContent = useStylesContent();
   return (
@@ -53,7 +57,11 @@ const Welcome = () => {
           </a>
         </div>
       </Container> */}
-      <div className={classesContent.navPage}>
+      <div
+        className={clsx(classesContent.navPage, {
+          [classesContent.navPageShift]: sidebarOpen,
+        })}
+      >
         <div>
           <Typography variant="h3">Dashboard</Typography>
         </div>
@@ -258,4 +266,8 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+const mapStateToProps = ({ layout }) => ({
+  stateLayout: layout,
+});
+
+export default connect(mapStateToProps)(Welcome);
