@@ -7,6 +7,10 @@
 - Updated check dependencies module in running script package.json for dev mode
 - Updated absolute path for component page
 
+### Added
+
+- Adding [React Fullscreen](https://www.npmjs.com/package/react-full-screen)
+
 ## 1.0.5 - October 2021
 
 ### Added
