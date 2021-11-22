@@ -18,7 +18,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { wrapper } from '@/redux/store';
 
 // Layout
-import Layout from '@/layout/dashboard/container';
+import Layout from '@/layout/dashboard/Container';
 
 // Lib
 // import { firebaseAnalytics, firebasePerformance } from '@/firebase';

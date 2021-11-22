@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import colors from 'qasir-ui/variables/colors';
 
 // Layouts
-import { headerHeight } from '@/layout/dashboard/header/style';
+import { headerHeight } from '@/layout/dashboard/Header/style';
 
 export const sidebarWidth = 240;
 
@@ -16,7 +16,7 @@ const useStylesSidebar = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: sidebarWidth,
-    top: '96px !important',
+    top: `${headerHeight}px !important`,
     backgroundColor: '#F2F4F7',
     border: 'none',
     transition: 'none',
@@ -27,9 +27,25 @@ const useStylesSidebar = makeStyles((theme) => ({
       marginBottom: 8,
       paddingTop: 15,
       paddingBottom: 15,
+      '& .MuiSvgIcon-root': {
+        color: colors.black30,
+      },
+    },
+    '& .MuiCollapse-root': {
+      '& .MuiListItem-root': {
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingLeft: 28,
+        marginBottom: 0,
+      },
+      '& .Mui-selected': {
+        '&:before': {
+          display: 'none',
+        },
+      },
     },
     '& .MuiListItemText-primary': {
-      color: colors.black90,
+      color: colors.black30,
       fontSize: 14,
       fontWeight: 500,
       lineHeight: '17px',
@@ -39,7 +55,7 @@ const useStylesSidebar = makeStyles((theme) => ({
     },
     '& .MuiListItemIcon-root': {
       minWidth: 35,
-      '&::last-child': {
+      '&:last-child': {
         marginBottom: 0,
       },
     },
@@ -52,7 +68,7 @@ const useStylesSidebar = makeStyles((theme) => ({
     },
     '& .Mui-selected': {
       backgroundColor: '#F2F4F7',
-      '&::before': {
+      '&:before': {
         content: '""',
         display: 'block',
         borderRight: `8px solid ${colors.red50}`,
@@ -62,11 +78,16 @@ const useStylesSidebar = makeStyles((theme) => ({
         left: 0,
       },
       '& .MuiListItemText-primary': {
-        color: colors.red50,
+        color: colors.black90,
       },
       '& .MuiListItemIcon-root': {
         '& .MuiSvgIcon-root': {
-          color: colors.red50,
+          color: colors.black90,
+        },
+      },
+      '& .MuiListItemText-root': {
+        '& + .MuiSvgIcon-root': {
+          color: colors.black90,
         },
       },
     },

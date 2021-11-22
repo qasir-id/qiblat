@@ -19,8 +19,8 @@ const useStylesHeader = makeStyles((theme) => ({
     },
   },
   appBarShift: {
-    width: `calc(100% - ${sidebarWidth}px)`,
     marginLeft: sidebarWidth,
+    marginRight: `-${sidebarWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,

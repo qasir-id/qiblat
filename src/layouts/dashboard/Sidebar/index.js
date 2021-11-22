@@ -12,6 +12,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from 'qasir-ui/utils/transitions/Collapse';
+
+// Qasir UI Icons
 import IconDashboard from 'qasir-ui/data-display/Icon/IconDashboard';
 import IconDropdown from 'qasir-ui/data-display/Icon/IconDropdown';
 
@@ -46,13 +48,13 @@ const Sidebar = (props) => {
             </ListItemIcon>
             <ListItemText primary="Single Menu" />
           </ListItem>
-          <ListItem button selected>
+          <ListItem button>
             <ListItemIcon>
               <IconDashboard />
             </ListItemIcon>
             <ListItemText primary="Single Menu Selected" />
           </ListItem>
-          <ListItem button onClick={handleClick}>
+          <ListItem button onClick={handleClick} selected>
             <ListItemIcon>
               <IconDashboard />
             </ListItemIcon>
@@ -61,7 +63,16 @@ const Sidebar = (props) => {
           </ListItem>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button className={classes.nested}>
+              <ListItem button>
+                <ListItemText primary="Child Multi Menu" />
+              </ListItem>
+              <ListItem button selected>
+                <ListItemText primary="Child Multi Menu" />
+              </ListItem>
+              <ListItem button>
+                <ListItemText primary="Child Multi Menu" />
+              </ListItem>
+              <ListItem button>
                 <ListItemText primary="Child Multi Menu" />
               </ListItem>
             </List>

@@ -2,10 +2,10 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 // Layouts
-import { headerHeight } from '@/layout/dashboard/header/style';
-import { sidebarWidth } from '@/layout/dashboard/sidebar/style';
+import { headerHeight } from '@/layout/dashboard/Header/style';
+import { sidebarWidth } from '@/layout/dashboard/Sidebar/style';
 
-export const contentNavPageHeight = 70;
+export const contentNavPageHeight = 110;
 
 const useStylesContent = makeStyles((theme) => ({
   root: {
@@ -29,8 +29,10 @@ const useStylesContent = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: sidebarWidth,
+    marginRight: `-${sidebarWidth}px`,
   },
   navPage: {
+    zIndex: 1,
     backgroundColor: '#F2F4F7',
     position: 'fixed',
     top: headerHeight,
@@ -40,8 +42,6 @@ const useStylesContent = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingLeft: 24,
-    paddingRight: 24,
     borderBottom: '1px solid #eef0f2',
     [theme.breakpoints.down('sm')]: {
       top: 74,
@@ -53,20 +53,15 @@ const useStylesContent = makeStyles((theme) => ({
     },
     '& > div': {
       backgroundColor: '#ffffff',
-      position: 'fixed',
-      top: headerHeight,
-      left: sidebarWidth,
-      right: 0,
       minHeight: contentNavPageHeight,
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
+      flexGrow: 1,
       paddingLeft: 24,
       paddingRight: 24,
       borderRadius: '24px 0 0 0',
       [theme.breakpoints.down('sm')]: {
-        top: 74,
-        left: 0,
         borderRadius: 0,
         transition: theme.transitions.create(['margin', 'width'], {
           easing: theme.transitions.easing.sharp,
@@ -79,15 +74,13 @@ const useStylesContent = makeStyles((theme) => ({
     },
   },
   navPageShift: {
-    width: `calc(100% - ${sidebarWidth}px)`,
     marginLeft: sidebarWidth,
+    marginRight: `-${sidebarWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
     '& > div': {
-      width: `calc(100% - ${sidebarWidth}px)`,
-      marginLeft: sidebarWidth,
       transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen,

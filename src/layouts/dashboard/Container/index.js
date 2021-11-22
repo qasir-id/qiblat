@@ -1,5 +1,6 @@
 // Vendors
 import React from 'react';
+import { connect } from 'react-redux';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 
 // Qasir UI
@@ -14,13 +15,20 @@ import Content from '../Content';
 // Styles
 import useStylesContainer from './style';
 
-export default (props) => {
-  const { children } = props;
+const Layout = (props) => {
+  const { children, stateLayout } = props;
+  const { sidebarOpen } = stateLayout.dashboard;
   const classes = useStylesContainer();
   const handleFullscreen = useFullScreenHandle();
   return (
     <FullScreen handle={handleFullscreen}>
-      <Container disableGutters maxWidth={false} component="section" className={classes.root}>
+      <Container
+        disableGutters
+        maxWidth={false}
+        component="section"
+        className={classes.root}
+        style={{ overflow: sidebarOpen ? 'hidden' : 'auto' }}
+      >
         <Header
           fullscreenActive={handleFullscreen.active}
           fullscreenEnter={handleFullscreen.enter}
@@ -33,3 +41,9 @@ export default (props) => {
     </FullScreen>
   );
 };
+
+const mapStateToProps = ({ layout }) => ({
+  stateLayout: layout,
+});
+
+export default connect(mapStateToProps)(Layout);
