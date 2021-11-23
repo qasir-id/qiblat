@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://example.com/">
-    <img src="https://www.qasir.id/assets/v2/images/logo.svg" alt="Qasir" width=150 height=50>
+    <img src="https://uploads-ssl.webflow.com/5f17b3a6740e17c63ab5e642/60235cc90389675a2a31abbb_qasir-logo.svg" alt="Qasir" width=150 height=50>
   </a>
 
   <h4 align="center">Qasir Boilerplate</h4>
@@ -16,9 +16,9 @@
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Getting Started](#getting-started)
 - [Main Features](#main-features)
-- [Documentation](https://fe-qasir.gitbook.io/qiblat-documentation)
 
 ## Getting Started
 

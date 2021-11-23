@@ -1,15 +1,17 @@
 // Vendors
 import React from 'react';
+import { connect } from 'react-redux';
+import clsx from 'clsx';
 
 // Next
 import Head from 'next/head';
 
 // Material UI
-import { Container, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Qasir UI
 import Typography from 'qasir-ui/data-display/Typography';
+import Button from 'qasir-ui/inputs/Button';
 
 // Styles
 import useStylesContent from '@/layout/dashboard/Content/style';
@@ -27,7 +29,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Welcome = () => {
+const Welcome = (props) => {
+  const { stateLayout } = props;
+  const { sidebarOpen } = stateLayout.dashboard;
   const classes = useStyles();
   const classesContent = useStylesContent();
   return (
@@ -53,9 +57,16 @@ const Welcome = () => {
           </a>
         </div>
       </Container> */}
-      <div className={classesContent.navPage}>
+      <div
+        className={clsx(classesContent.navPage, {
+          [classesContent.navPageShift]: sidebarOpen,
+        })}
+      >
         <div>
           <Typography variant="h3">Dashboard</Typography>
+          <Button variant="contained" color="primary" size="large">
+            Add
+          </Button>
         </div>
       </div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -258,4 +269,8 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+const mapStateToProps = ({ layout }) => ({
+  stateLayout: layout,
+});
+
+export default connect(mapStateToProps)(Welcome);

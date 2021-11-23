@@ -1,24 +1,24 @@
 // Vendors
 import React, { useEffect } from 'react';
-// import { useStore } from 'react-redux';
-// import { PersistGate } from 'redux-persist/integration/react';
+import { useStore } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import PropTypes from 'prop-types';
 
 // Next
 import Head from 'next/head';
 
 // Material UI
-// import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 // import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Theme
-// import theme from '@/override/material-ui/theme';
+// import theme from 'qasir-ui/variables/theme';
 
 // Configs
-// import { wrapper } from '@/redux/store';
+import { wrapper } from '@/redux/store';
 
 // Layout
-import Layout from '@/layout/dashboard/container';
+import Layout from '@/layout/dashboard/Container';
 
 // Lib
 // import { firebaseAnalytics, firebasePerformance } from '@/firebase';
@@ -30,7 +30,7 @@ const App = (props) => {
   const { Component, pageProps } = props;
   // Use the layout defined at the page level, if available
   // const getLayout = Component.getLayout || ((page) => page);
-  // const store = useStore((state) => state);
+  const store = useStore((state) => state);
 
   useEffect(() => {
     // Initialize Firebase
@@ -80,11 +80,11 @@ const App = (props) => {
 
       <StyleGlobal />
 
-      {/* <PersistGate persistor={store.__persistor} loading={null}> */}
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      {/* </PersistGate> */}
+      <PersistGate persistor={store.__persistor} loading={null}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </PersistGate>
       {/* </ThemeProvider> */}
     </>
   );
@@ -95,5 +95,4 @@ App.propTypes = {
   pageProps: PropTypes.object.isRequired,
 };
 
-export default App;
-// export default wrapper.withRedux(App);
+export default wrapper.withRedux(App);
