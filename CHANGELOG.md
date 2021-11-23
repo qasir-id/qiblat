@@ -10,6 +10,7 @@
 ### Added
 
 - Adding [React Fullscreen](https://www.npmjs.com/package/react-full-screen)
+- Adding tree state system
 
 ## 1.0.5 - October 2021
 
