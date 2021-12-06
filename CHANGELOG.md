@@ -1,5 +1,11 @@
 # Release Note:
 
+## 1.0.7 - December 2021
+
+### Changed
+
+- Updated components page documentation
+
 ## 1.0.6 - November 2021
 
 ### Changed
