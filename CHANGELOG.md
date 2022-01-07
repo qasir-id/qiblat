@@ -1,5 +1,11 @@
 # Release Note:
 
+## 1.0.8 - January 2022
+
+### Added
+
+- Adding documentation for [libraries](https://fe-qasir.gitbook.io/qiblat-documentation/features/libraries)
+
 ## 1.0.7 - December 2021
 
 ### Changed
