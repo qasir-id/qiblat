@@ -6,6 +6,8 @@
 
 - Adding documentation for [libraries](https://fe-qasir.gitbook.io/qiblat-documentation/features/libraries)
 - Adding documentation for [utilities](https://fe-qasir.gitbook.io/qiblat-documentation/features/utilities)
+- Adding documentation for [stores](https://fe-qasir.gitbook.io/qiblat-documentation/features/stores)
+- Adding documentation for [server](https://fe-qasir.gitbook.io/qiblat-documentation/features/server)
 
 ## 1.0.7 - December 2021
 
